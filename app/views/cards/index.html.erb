@@ -1,0 +1,27 @@
+<style>
+
+.table {
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+  }
+  ul#horizontal-list li {
+    display: inline;
+  }
+</style>
+
+
+<div class="table">
+  <ul id="horizontal-list">
+    <% @deck['cards'].each do |card| %>
+    <li>
+      <img src=<%= card['image'] %> width="140px"></img>
+    </li>
+    <% end %>
+  </ul>
+</div>
