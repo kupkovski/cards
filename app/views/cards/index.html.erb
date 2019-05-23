@@ -15,13 +15,14 @@ ul#horizontal-list {
   }
 </style>
 
-
-<div class="table">
-  <ul id="horizontal-list">
-    <% @deck['cards'].each do |card| %>
-    <li>
-      <img src=<%= card['image'] %> width="140px"></img>
-    </li>
-    <% end %>
-  </ul>
+<div id="#hand">
+  <div class="table">
+    <ul id="horizontal-list">
+      <% @deck['cards'].each do |card| %>
+      <li>
+        <img src=<%= card['image'] %> width="140px"></img>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
