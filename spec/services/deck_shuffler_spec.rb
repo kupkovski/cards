@@ -10,23 +10,23 @@ describe Services::DeckShuffler do
     context 'when response is ok' do
       it 'raises error' do
         expect(Net::HTTP)
-        .to receive(:start)
-        .with("deckofcardsapi.com", 443, { use_ssl: true })
-        .and_yield start
+          .to receive(:start)
+          .with('deckofcardsapi.com', 443, use_ssl: true)
+          .and_yield start
 
         expect(start)
-        .to receive(:request)
-        .with(Net::HTTP::Get)
-        .and_return request
+          .to receive(:request)
+          .with(Net::HTTP::Get)
+          .and_return request
 
         expect(request)
-        .to receive(:body)
-        .and_return 'error happened'
+          .to receive(:body)
+          .and_return 'error happened'
 
         expect do
           described_class.new.call
         end.to raise_error(RuntimeError)
-        .with_message 'Error: RSpec::Mocks::Double - "error happened"'
+          .with_message 'Error: RSpec::Mocks::Double - "error happened"'
       end
     end
 
@@ -34,14 +34,14 @@ describe Services::DeckShuffler do
       let(:request) { double(:request) }
 
       let(:response) do
-       double(:response, body: { 'deck_id': 999 }.to_json)
-     end
+        double(:response, body: { 'deck_id': 999 }.to_json)
+      end
 
       it 'returns the content' do
         expect(Net::HTTP)
-        .to receive(:start)
-        .with("deckofcardsapi.com", 443, { use_ssl: true })
-        .and_yield start
+          .to receive(:start)
+          .with('deckofcardsapi.com', 443, use_ssl: true)
+          .and_yield start
 
         expect(Net::HTTP::Get)
           .to receive(:new)
@@ -53,9 +53,9 @@ describe Services::DeckShuffler do
           .and_return true
 
         expect(start)
-        .to receive(:request)
-        .with(request)
-        .and_return response
+          .to receive(:request)
+          .with(request)
+          .and_return response
 
         expect(described_class.new.call).to eq 999
       end

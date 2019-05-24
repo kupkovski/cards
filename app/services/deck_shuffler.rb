@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   class DeckShuffler < Base
     def call
@@ -15,6 +17,5 @@ module Services
     def uri
       URI('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
     end
-
   end
 end

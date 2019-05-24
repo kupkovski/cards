@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   class CardsCreator
     attr_reader :hand_id, :data

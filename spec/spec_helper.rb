@@ -5,9 +5,7 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../config/environment', __dir__)
 require 'rspec/rails'
 
-
 RSpec.configure do |config|
-
   # databasecleaner
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
@@ -32,6 +30,6 @@ RSpec.configure do |config|
 end
 
 VCR.configure do |config|
-  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.cassette_library_dir = 'fixtures/vcr_cassettes'
   config.hook_into :webmock
 end

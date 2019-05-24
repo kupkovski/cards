@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   class HandCreator
     attr_reader :data, :deck_id

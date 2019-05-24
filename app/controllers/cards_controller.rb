@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CardsController < ApplicationController
   def index
     deck_external_id = Services::DeckShuffler.new.call
