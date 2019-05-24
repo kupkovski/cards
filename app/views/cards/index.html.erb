@@ -6,7 +6,6 @@
 }
 
 ul#horizontal-list {
-  min-width: 696px;
   list-style: none;
   padding-top: 20px;
   }
@@ -18,9 +17,10 @@ ul#horizontal-list {
 <div id="#hand">
   <div class="table">
     <ul id="horizontal-list">
-      <% @deck['cards'].each do |card| %>
+      <% @cards.each do |card| %>
       <li>
-        <img src=<%= card['image'] %> width="140px"></img>
+        <img src=<%= card.image %> width='140px'></img>
+        <span style="margin-top: 20px"><%= card.name %></span>
       </li>
       <% end %>
     </ul>

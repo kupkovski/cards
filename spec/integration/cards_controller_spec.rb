@@ -42,11 +42,27 @@ RSpec.describe CardsController, type: :controller do
 
     it 'gets the deck and the hand of 5 cards afterwards' do
       VCR.use_cassette('deck') do
-        get :index
+          expect {
+          get :index
+        }.to change { Deck.count }.by(1)
+        .and change { Hand.count }.by(1)
+        .and change { Card.count }.by(5)
+
         expect(response).to be_ok
-        deck = assigns(:deck)
-        expect(deck['cards']).to eq expected_response
+
+        expected_names = [
+          'ace of hearts',
+          '2 of spades',
+          '4 of diamonds',
+          '10 of diamonds',
+          '7 of diamonds'
+        ]
+
+        Card.all.each_with_index do |card, i|
+          expect(card.name).to eq expected_names[i]
+        end
       end
     end
+
   end
 end
