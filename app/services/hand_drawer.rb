@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   class HandDrawer < Base
     attr_reader :deck_id
@@ -7,7 +9,6 @@ module Services
     end
 
     def call
-
       Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
         request = Net::HTTP::Get.new(uri)
         response = http.request(request)

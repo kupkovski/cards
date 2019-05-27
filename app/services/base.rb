@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+require 'uri'
+require 'net/http'
+
 module Services
   class Base
     def validate_response(response)

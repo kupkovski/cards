@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - deckofcardsapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 May 2019 02:17:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d252049249de8a8d9c2b66388af9b61fd1558577875; expires=Fri, 22-May-20
+        02:17:55 GMT; path=/; domain=.deckofcardsapi.com; HttpOnly
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4db3894bfa25d034-GRU
+    body:
+      encoding: ASCII-8BIT
+      string: '{"deck_id": "0zm46qa3w0pl", "remaining": 52, "success": true, "shuffled":
+        true}'
+    http_version: 
+  recorded_at: Thu, 23 May 2019 02:21:17 GMT
+- request:
+    method: get
+    uri: https://deckofcardsapi.com/api/deck/0zm46qa3w0pl/draw/?count=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - deckofcardsapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 May 2019 02:17:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dce24bc992f946f5e788cafe53acd0c261558577876; expires=Fri, 22-May-20
+        02:17:56 GMT; path=/; domain=.deckofcardsapi.com; HttpOnly
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4db3894f8c0ccfe0-GRU
+    body:
+      encoding: ASCII-8BIT
+      string: '{"deck_id": "0zm46qa3w0pl", "cards": [{"value": "ACE", "suit": "HEARTS",
+        "code": "AH", "image": "https://deckofcardsapi.com/static/img/AH.png", "images":
+        {"svg": "https://deckofcardsapi.com/static/img/AH.svg", "png": "https://deckofcardsapi.com/static/img/AH.png"}},
+        {"value": "2", "suit": "SPADES", "code": "2S", "image": "https://deckofcardsapi.com/static/img/2S.png",
+        "images": {"svg": "https://deckofcardsapi.com/static/img/2S.svg", "png": "https://deckofcardsapi.com/static/img/2S.png"}},
+        {"value": "4", "suit": "DIAMONDS", "code": "4D", "image": "https://deckofcardsapi.com/static/img/4D.png",
+        "images": {"svg": "https://deckofcardsapi.com/static/img/4D.svg", "png": "https://deckofcardsapi.com/static/img/4D.png"}},
+        {"value": "10", "suit": "DIAMONDS", "code": "0D", "image": "https://deckofcardsapi.com/static/img/0D.png",
+        "images": {"svg": "https://deckofcardsapi.com/static/img/0D.svg", "png": "https://deckofcardsapi.com/static/img/0D.png"}},
+        {"value": "7", "suit": "DIAMONDS", "code": "7D", "image": "https://deckofcardsapi.com/static/img/7D.png",
+        "images": {"svg": "https://deckofcardsapi.com/static/img/7D.svg", "png": "https://deckofcardsapi.com/static/img/7D.png"}}],
+        "remaining": 47, "success": true}'
+    http_version: 
+  recorded_at: Thu, 23 May 2019 02:21:17 GMT
+recorded_with: VCR 4.0.0
