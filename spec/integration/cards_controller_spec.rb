@@ -45,8 +45,8 @@ RSpec.describe CardsController, type: :controller do
         expect do
           get :index
         end.to change { Deck.count }.by(1)
-                                    .and change { Hand.count }.by(1)
-                                                              .and change { Card.count }.by(5)
+        .and change { Hand.count }.by(1)
+        .and change { Card.count }.by(5)
 
         expect(response).to be_ok
 
