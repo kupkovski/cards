@@ -9,7 +9,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'database_cleaner'
 gem 'jbuilder', '~> 2.5'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.2'
 gem 'sass-rails', '~> 5.0'
 gem 'sqlite3'
